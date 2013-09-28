@@ -1,0 +1,27 @@
+<h1>Listing dudadas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aaa</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dudadas.each do |dudada| %>
+      <tr>
+        <td><%= dudada.aaa %></td>
+        <td><%= link_to 'Show', dudada %></td>
+        <td><%= link_to 'Edit', edit_dudada_path(dudada) %></td>
+        <td><%= link_to 'Destroy', dudada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dudada', new_dudada_path %>
